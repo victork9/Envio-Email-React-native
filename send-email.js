@@ -2,7 +2,7 @@ import qs from 'qs';
 import { Linking } from 'react-native';
 
 
-export async function sendEmail(to, subject, body, options = {}) {
+export async function sendYourEmail(to, subject, body, options = {}) {
     const { cc, bcc } = options;
 
     let url = `mailto:${to}`;
@@ -35,9 +35,9 @@ export async function sendEmail(to, subject, body, options = {}) {
 import { sendEmail } from './send-email';
 
 sendEmail(
-    'victorklippel0123@gmail.com',
-    'Greeting!',
-    'I think you are fucked up how many letters you get.'
+    'youremail@provider.com',
+    'subject matter!',
+    'Mensage.'
 ).then(() => {
     console.log('Our email successful provided to device mail ');
 });
